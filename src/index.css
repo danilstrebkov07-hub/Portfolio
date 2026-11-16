@@ -36,7 +36,7 @@
   }
 }
 
-/* Медиа-запросы для мобильных устройств — исправляем наложение секций */
+/* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
   section {
     padding: 60px 20px !important;
@@ -53,12 +53,11 @@
     font-size: 1.5rem !important;
   }
 
-  /* Убираем position: absolute у декоративных элементов на мобильных */
+  /* Скрываем фоновые фигуры на мобильных */
   .fixed.inset-0.-z-10 {
     display: none;
   }
 
-  /* Навигация — адаптивные отступы */
   nav {
     padding: 1rem 20px !important;
     position: fixed !important;
@@ -71,7 +70,7 @@
 
   /* Hero — контент не должен перекрываться кнопкой */
   .hero,
-  section[class*="min-h-\\[80vh\\]"] {
+  section[class*="min-h-"] {
     min-height: auto !important;
     padding: 80px 20px 60px !important;
     display: flex !important;
@@ -103,25 +102,21 @@
     z-index: 10 !important;
   }
 
-  /* Заголовки секций — достаточно места снизу */
   section h2 {
-    margin-bottom: 1.5rem !important;
     margin-top: 2rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
-  /* П间 отступы между секциями на мобильных */
   section + section {
     margin-top: 2rem !important;
   }
 
-  /* Контакты — кнопки не перекрывают текст */
   #contact .flex.flex-col {
     flex-direction: column !important;
     align-items: center !important;
     gap: 1rem !important;
   }
 
-  #contact .flex.flex-col .motion.a,
   #contact .flex.flex-col a {
     width: 100% !important;
     max-width: 300px !important;
@@ -130,20 +125,17 @@
     z-index: 10 !important;
   }
 
-  /* About — стек на мобильных */
-  #about .grid.md\\:grid-cols-2 {
+  #about .grid.md\:grid-cols-2 {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
 
-  /* Projects и Skills — одна колонка на мобильных */
-  #projects .grid.md\\:grid-cols-3,
-  #skills .grid.md\\:grid-cols-3 {
+  #projects .grid.md\:grid-cols-3,
+  #skills .grid.md\:grid-cols-3 {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
   }
 
-  /* z-index — контент поверх фоновых элементов */
   main > section {
     position: relative !important;
     z-index: 10 !important;
@@ -168,20 +160,20 @@
     font-size: 2rem;
   }
 
-  #projects .grid.md\\:grid-cols-3,
-  #skills .grid.md\\:grid-cols-3 {
+  #projects .grid.md\:grid-cols-3,
+  #skills .grid.md\:grid-cols-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Десктоп > 1024px — всё как раньше */
+/* Десктоп > 1024px */
 @media (min-width: 1025px) {
   section {
     padding: 6rem 10%;
   }
 
-  #projects .grid.md\\:grid-cols-3,
-  #skills .grid.md\\:grid-cols-3 {
+  #projects .grid.md\:grid-cols-3,
+  #skills .grid.md\:grid-cols-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }

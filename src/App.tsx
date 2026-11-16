@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import { motion } from 'framer-motion'
 import {
   Database,
